@@ -7,62 +7,90 @@ const seo = {
     'Natural refinement with medical rigor. Neurotoxins, Juvederm fillers, microneedling, Aerolase, and more—delivered with clinical-grade standards in New Windsor, NY.',
   canonical: '/',
   type: 'website',
-  jsonLd:
+  jsonLd: [
   {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'D-Essence Wellness',
-  url: 'https://www.d-essencewellness.com',
-  image: 'https://www.d-essencewellness.com/LOGO_W.webp',
-  priceRange: '$$',
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://www.d-essencewellness.com/#business",
+    "name": "D-Essence Wellness",
+    "url": "https://www.d-essencewellness.com/",
+    "image": "https://www.d-essencewellness.com/LOGO_W.webp",
+    "logo": "https://www.d-essencewellness.com/LOGO_W.webp",
+    "telephone": "+1-716-303-8963",
+    "priceRange": "$$",
 
-  // Subclase especializada para SEO enriquecido
-  additionalType: 'https://schema.org/HealthAndBeautyBusiness',
-
-  telephone: '+1-716-303-8963',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '871 Blooming Grove Turnpike Suite 102',
-    addressLocality: 'New Windsor',
-    addressRegion: 'NY',
-    postalCode: '12553',
-    addressCountry: 'US'
-  },
-
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Tuesday',
-      opens: '10:00',
-      closes: '19:00'
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "871 Blooming Grove Turnpike Suite 102",
+      "addressLocality": "New Windsor",
+      "addressRegion": "NY",
+      "postalCode": "12553",
+      "addressCountry": "US"
     },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Thursday',
-      opens: '10:00',
-      closes: '19:00'
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Friday', 'Saturday'],
-      opens: '10:00',
-      closes: '18:00'
-    }
-  ],
 
-  potentialAction: {
-    '@type': 'ReserveAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx',
-      inLanguage: 'en'
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.482130,
+      "longitude": -74.070640
     },
-    result: {
-      '@type': 'Reservation',
-      name: 'Consultation Request'
-    }
+
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-716-303-8963",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Spanish"]
+    },
+
+    "sameAs": [
+      "https://www.instagram.com/d_essencewellness/",
+      "https://www.facebook.com/profile.php?id=100093851335127"
+    ],
+
+    "hasMap": "https://www.google.com/maps/place/871+Blooming+Grove+Turnpike+Suite+102,+New+Windsor,+NY+12553",
+
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Hudson Valley, New York"
+    },
+
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Thursday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+
+    "paymentAccepted": "Cash, Credit Card, Debit Card",
+    "currenciesAccepted": "USD",
+
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx",
+        "inLanguage": "en"
+      },
+      "result": { "@type": "Reservation", "name": "Appointment Booking" }
+    },
+
+    "makesOffer": [
+      { "@type": "Service", "name": "Injectables" },
+      { "@type": "Service", "name": "Laser Treatments" },
+      { "@type": "Service", "name": "Advanced Facials" },
+      { "@type": "Service", "name": "Wellness & IV Therapy" },
+      { "@type": "Service", "name": "Aesthetic Services" }
+    ]
   }
-}
+]
+
 
 };
 ---
