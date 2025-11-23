@@ -7,6 +7,7 @@ const seo = {
     'In-office teeth whitening with professional-grade gel and LED activation to lift stains from coffee, tea, wine, and daily habits. Gentle, fast, and designed to minimize sensitivity.',
   canonical: '/services/teeth-whitening/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,12 +15,19 @@ const seo = {
       name: 'Teeth Whitening',
       serviceType: 'Teeth Whitening',
       description:
-        'In-office teeth whitening using professional-grade gel activated by LED light to safely and effectively brighten your smile.',
+        'Professional in-office teeth whitening using medical-grade gel and LED activation to brighten your smile safely and effectively.',
       areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
         telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -29,19 +37,32 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/teeth-whitening/'
+
+      url: 'https://www.d-essencewellness.com/services/teeth-whitening/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Teeth Whitening', item: 'https://dessencewellness.com/services/teeth-whitening/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Teeth Whitening',
+          item: 'https://www.d-essencewellness.com/services/teeth-whitening/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload image -->

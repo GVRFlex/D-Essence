@@ -4,22 +4,28 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Facial Waxing | D-Essence Wellness',
   description:
-    'Precise waxing for brows, upper lip, chin, and sideburns. Gentle, high-quality wax removes hair from the root for a smooth, defined, and refreshed look.',
+    'Precise facial waxing for brows, upper lip, chin, and sideburns using gentle, high-quality wax. Smooth, clean, and defined results with minimal irritation.',
   canonical: '/services/facial-waxing/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Facial Waxing',
-      serviceType: 'Hair Removal',
+      serviceType: 'Facial Hair Removal',
       description:
-        'Precision waxing for small facial areas—eyebrows, upper lip, chin, sideburns—using gentle, high-quality wax for smooth, defined results.',
+        'Professional facial waxing for eyebrows, upper lip, chin, and sideburns using gentle wax to achieve smooth and defined results.',
       areaServed: 'Hudson Valley, NY',
+      url: 'https://www.d-essencewellness.com/services/facial-waxing/',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
         telephone: '+1-716-303-8963',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -28,20 +34,31 @@ const seo = {
           postalCode: '12553',
           addressCountry: 'US'
         }
-      },
-      url: 'https://dessencewellness.com/services/facial-waxing/'
+      }
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Facial Waxing', item: 'https://dessencewellness.com/services/facial-waxing/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Facial Waxing',
+          item: 'https://www.d-essencewellness.com/services/facial-waxing/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared service image (replace later as needed) -->

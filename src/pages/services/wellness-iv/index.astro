@@ -7,25 +7,43 @@ const seo = {
     'Targeted vitamin injections (B12, MICC, Lipo Plus, L-Carnitine, Amino Blend, Glutathione, Tri-Immune) and IV infusions for Energy, Immunity, Hydration, and Wellness.',
   canonical: '/services/wellness-iv/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'HealthAndBeautyBusiness',
-      name: 'D-Essence Wellness',
-      url: 'https://dessencewellness.com/services/wellness-iv/',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '871 Blooming Grove Turnpike Suite 102',
-        addressLocality: 'New Windsor',
-        addressRegion: 'NY',
-        postalCode: '12553',
-        addressCountry: 'US'
+      '@type': 'Service',
+      name: 'Wellness & IV Treatments',
+      serviceType: 'IV Therapy & Vitamin Injections',
+      description:
+        'IV infusions and targeted vitamin injections designed for hydration, immunity, energy, and overall wellness.',
+      areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
       },
+
+      url: 'https://www.d-essencewellness.com/services/wellness-iv/',
       makesOffer: [
-        { '@type': 'Service', name: 'IV Infusions — Energy' },
-        { '@type': 'Service', name: 'IV Infusions — Immunity' },
-        { '@type': 'Service', name: 'IV Infusions — Hydration' },
-        { '@type': 'Service', name: 'IV Infusions — Wellness' },
+        { '@type': 'Service', name: 'IV Infusion — Energy' },
+        { '@type': 'Service', name: 'IV Infusion — Immunity' },
+        { '@type': 'Service', name: 'IV Infusion — Hydration' },
+        { '@type': 'Service', name: 'IV Infusion — Wellness' },
         { '@type': 'Service', name: 'Vitamin Injection — B12 (Methylcobalamin)' },
         { '@type': 'Service', name: 'Vitamin Injection — MICC' },
         { '@type': 'Service', name: 'Vitamin Injection — Lipo Plus' },
@@ -34,10 +52,30 @@ const seo = {
         { '@type': 'Service', name: 'Vitamin Injection — Glutathione' },
         { '@type': 'Service', name: 'Vitamin Injection — Tri-Immune Boost' }
       ]
+    },
+
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Wellness & IV',
+          item: 'https://www.d-essencewellness.com/services/wellness-iv/'
+        }
+      ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (dark) ===== -->

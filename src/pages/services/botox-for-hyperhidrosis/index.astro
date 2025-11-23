@@ -7,6 +7,7 @@ const seo = {
     'FDA-approved Botox® treatment for axillary hyperhidrosis. Temporarily blocks sweat gland signals to reduce perspiration and improve comfort, with results that typically last 4–6 months.',
   canonical: '/services/botox-for-hyperhidrosis/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -19,38 +20,54 @@ const seo = {
         'Multiple small intradermal injections of botulinum toxin are administered in a grid-like pattern to block cholinergic signaling to eccrine sweat glands.',
       preparation:
         'Arrive with clean, shaved underarms (avoid antiperspirant/deodorant on treatment day). Avoid blood-thinning supplements/medications when medically appropriate.',
-      followup: 'Assessment around 10–14 days; maintenance typically every 4–6 months as needed.',
+      followup:
+        'Assessment around 10–14 days; maintenance typically every 4–6 months as needed.',
       estimatedCost: 'Varies by units used',
       areaServed: 'Hudson Valley, NY',
-      availableService: {
-        '@type': 'Service',
-        serviceType: 'Botulinum toxin treatment for hyperhidrosis',
-        provider: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness',
-          telephone: '+1-716-303-8963',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '871 Blooming Grove Turnpike Suite 102',
-            addressLocality: 'New Windsor',
-            addressRegion: 'NY',
-            postalCode: '12553',
-            addressCountry: 'US'
-          }
+      url: 'https://www.d-essencewellness.com/services/botox-for-hyperhidrosis/',
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        telephone: '+1-716-303-8963',
+
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
         }
       }
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Underarm Hyperhidrosis Treatment', item: 'https://dessencewellness.com/services/botox-for-hyperhidrosis/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Underarm Hyperhidrosis Treatment',
+          item: 'https://www.d-essencewellness.com/services/botox-for-hyperhidrosis/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload imagen principal -->

@@ -7,6 +7,7 @@ const seo = {
     'Natural hair removal using a lemon–sugar–water paste that lifts hair from the root with minimal irritation—gentle, effective, and free of harsh chemicals.',
   canonical: '/services/sugaring/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,12 +15,19 @@ const seo = {
       name: 'Sugaring Hair Removal',
       serviceType: 'Aesthetic Hair Removal',
       description:
-        'Sugaring uses a natural lemon–sugar–water paste to remove hair in the direction of growth, minimizing irritation and helping with ingrown or curly hairs.',
+        'Sugaring uses a natural lemon–sugar–water paste to remove hair in the direction of growth, minimizing irritation and helping prevent ingrown hairs.',
       areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
         telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -29,19 +37,32 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/sugaring/'
+
+      url: 'https://www.d-essencewellness.com/services/sugaring/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Sugaring Hair Removal', item: 'https://dessencewellness.com/services/sugaring/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Sugaring Hair Removal',
+          item: 'https://www.d-essencewellness.com/services/sugaring/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (replace later) -->

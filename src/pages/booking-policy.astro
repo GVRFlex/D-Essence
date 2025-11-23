@@ -7,19 +7,25 @@ const seo = {
   title: 'Booking Policy | D-Essence Wellness',
   description:
     'Read our booking, cancellation, deposits, payments, pricing, refunds, and referral credits policy before scheduling.',
-  canonical: 'https://d-essencewellness.com/booking-policy',
+  canonical: '/booking-policy',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Booking Policy',
-      url: 'https://d-essencewellness.com/booking-policy',
-      dateModified: '2024-06-09'
+      url: 'https://www.d-essencewellness.com/booking-policy',
+      dateModified: '2024-06-09',
+
+      // Opcionales recomendados por Google (quitan warnings)
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$'
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (dark) ===== -->

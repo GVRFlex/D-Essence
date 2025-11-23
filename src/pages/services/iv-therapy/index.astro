@@ -4,22 +4,28 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'IV Therapy Infusions | D-Essence Wellness',
   description:
-    'Customized IV vitamin infusions for rapid hydration, immune support, recovery, and overall wellness. Options include Myers Cocktail (Super Immune Boost), Restoration Drip, Amino & Multivitamin Infusion, and Wellness Recharge.',
+    'Customized IV vitamin infusions for hydration, immunity, recovery, energy, and overall wellness. Includes Myers Cocktail, Restoration Drip, Amino & Multivitamin Infusion, and Wellness Recharge.',
   canonical: '/services/iv-therapy/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'IV Therapy Infusions',
-      serviceType: 'IV Vitamin Therapy',
+      serviceType: 'IV Vitamin Therapy & Hydration',
       description:
-        'Intravenous hydration and nutrient therapy for immune support, recovery, energy, and skin wellness.',
+        'Intravenous hydration and nutrient therapy designed to support immunity, boost energy, enhance recovery, and improve overall wellness.',
       areaServed: 'Hudson Valley, NY',
+      url: 'https://www.d-essencewellness.com/services/iv-therapy/',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
         telephone: '+1-716-303-8963',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -28,20 +34,31 @@ const seo = {
           postalCode: '12553',
           addressCountry: 'US'
         }
-      },
-      url: 'https://dessencewellness.com/services/iv-therapy/'
+      }
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'IV Therapy Infusions', item: 'https://dessencewellness.com/services/iv-therapy/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'IV Therapy Infusions',
+          item: 'https://www.d-essencewellness.com/services/iv-therapy/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (replace later if desired) -->

@@ -7,16 +7,22 @@ const seo = {
     'Questions or bookings? Send us a note—our team will reply within one business day.',
   canonical: '/contact-us',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
       name: 'Contact D-Essence Wellness',
-      url: 'https://dessencewellness.com/contact-us'
+      url: 'https://www.d-essencewellness.com/contact-us',
+
+      // Opcionales recomendados por Google
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$'
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (dark) ===== -->

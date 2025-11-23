@@ -7,6 +7,7 @@ const seo = {
     'No-downtime, bi-phasic peel that exfoliates, hydrates, and revitalizes without visible peeling. Safe for all skin types year-round; ideal for dull, congested, or acne-prone skin.',
   canonical: '/services/biorepeel/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,12 +15,19 @@ const seo = {
       name: 'BioRePeel',
       serviceType: 'Chemical Peel',
       description:
-        'A bi-phasic peel that resurfaces, hydrates, and brightens with no visible peeling or downtime. Suitable for all skin types and seasons.',
+        'A bi-phasic peel that resurfaces, hydrates, and brightens with no visible peeling or downtime. Suitable for all skin types and all seasons.',
       areaServed: 'Hudson Valley, NY',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
         telephone: '+1-716-303-8963',
+        url: 'https://www.d-essencewellness.com',
+
+        // Recomendados por Google
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -29,19 +37,32 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/biorepeel/'
+
+      url: 'https://www.d-essencewellness.com/services/biorepeel/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'BioRePeel', item: 'https://dessencewellness.com/services/biorepeel/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'BioRePeel',
+          item: 'https://www.d-essencewellness.com/services/biorepeel/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (replace later as needed) -->

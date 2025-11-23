@@ -5,18 +5,24 @@ const seo = {
   title: 'Privacy Policy | D-Essence Wellness',
   description:
     'Learn how D-Essence Wellness collects, uses, protects, and shares your information. Read our Privacy Policy.',
-  canonical: '/privacy',
+  canonical: '/privacy-policy',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'PrivacyPolicy',
       name: 'Privacy Policy',
-      url: 'https://dessencewellness.com/privacy-policy',
-      dateModified: '2024-06-09'
+      url: 'https://www.d-essencewellness.com/privacy-policy',
+      dateModified: '2024-06-09',
+
+      // Campos opcionales que Google marca como "missing" si no están:
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$'
     }
   ]
 };
+---
+
 ---
 
 <BaseLayout seo={seo}>

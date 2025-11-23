@@ -4,20 +4,28 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Dermal Fillers | D-Essence Wellness',
   description:
-    'Restore volume, smooth fine lines, and enhance facial contours with hyaluronic acid dermal fillers. Natural-looking results with little to no downtime.',
+    'Restore volume, smooth fine lines, and enhance contours with premium hyaluronic acid dermal fillers. Natural-looking, balanced results with little to no downtime.',
   canonical: '/services/dermal-fillers/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Dermal Fillers',
-      serviceType: 'Hyaluronic Acid Fillers',
+      serviceType: 'Hyaluronic Acid Dermal Fillers',
+      description:
+        'Hyaluronic acid fillers designed to restore volume, refine lines, and enhance facial contours for natural, refreshed results.',
       areaServed: 'Hudson Valley, NY',
+      url: 'https://www.d-essencewellness.com/services/dermal-fillers/',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
         telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -26,20 +34,31 @@ const seo = {
           postalCode: '12553',
           addressCountry: 'US'
         }
-      },
-      url: 'https://dessencewellness.com/services/dermal-fillers/'
+      }
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Dermal Fillers', item: 'https://dessencewellness.com/services/dermal-fillers/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Dermal Fillers',
+          item: 'https://www.d-essencewellness.com/services/dermal-fillers/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared placeholder image -->

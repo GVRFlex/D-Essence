@@ -7,13 +7,18 @@ const seo = {
     'Gentle, effective laser for rejuvenation and hair reduction. FDA-cleared, 1064 nm Nd:YAG with 650-microsecond pulse—safe for all skin tones (I–VI) with no downtime.',
   canonical: '/services/aerolase/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Aerolase Laser Treatments',
       serviceType: 'Aesthetic Laser (1064 nm Nd:YAG, 650-microsecond)',
+      description:
+        'Non-invasive, gentle Aerolase® Neo Elite laser treatments for rejuvenation, acne, melasma, rosacea, and hair reduction. Safe for ALL skin tones (I–VI). Zero downtime.',
+
       areaServed: 'Hudson Valley, NY',
+
       availableChannel: {
         '@type': 'ServiceChannel',
         serviceLocation: {
@@ -29,24 +34,43 @@ const seo = {
           }
         }
       },
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
-        telephone: '+1-716-303-8963'
+        telephone: '+1-716-303-8963',
+
+        // Opcionales recomendados por Google
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        url: 'https://www.d-essencewellness.com'
       },
-      url: 'https://dessencewellness.com/services/aerolase/'
+
+      url: 'https://www.d-essencewellness.com/services/aerolase/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Aerolase Laser Treatments', item: 'https://dessencewellness.com/services/aerolase/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Aerolase Laser Treatments',
+          item: 'https://www.d-essencewellness.com/services/aerolase/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared placeholder image -->

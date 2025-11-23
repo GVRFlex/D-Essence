@@ -7,6 +7,7 @@ const seo = {
     'Dissolvable Smooth PDO Threads stimulate collagen to refine and firm skin—softening fine lines and mild laxity with minimal downtime. Subtle, natural rejuvenation.',
   canonical: '/services/smooth-threads/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,18 +15,28 @@ const seo = {
       name: 'Smooth PDO Threads',
       alternateName: 'PDO Thread Therapy (Smooth Threads)',
       procedureType: 'Minimally invasive collagen-stimulating treatment',
-      howPerformed: 'Placement of smooth polydioxanone (PDO) threads in the dermis to induce collagen production',
+      howPerformed:
+        'Placement of smooth polydioxanone (PDO) threads in the dermis to induce collagen production.',
       bodyLocation: 'Under-eyes, lips, cheeks, jawline, neck',
-      preparation: 'Arrive with clean skin; avoid blood-thinning agents if medically appropriate per guidance.',
-      followup: 'Results build gradually over months; series/maintenance may be recommended.',
+      preparation:
+        'Arrive with clean skin; avoid blood-thinning agents if medically appropriate per guidance.',
+      followup:
+        'Results build gradually over months; maintenance or a series may be recommended.',
       areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       availableService: {
         '@type': 'Service',
         serviceType: 'Smooth PDO Thread Therapy',
         provider: {
           '@type': 'HealthAndBeautyBusiness',
           name: 'D-Essence Wellness',
+          url: 'https://www.d-essencewellness.com',
           telephone: '+1-716-303-8963',
+          image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+          priceRange: '$$',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -36,19 +47,32 @@ const seo = {
           }
         }
       },
-      url: 'https://dessencewellness.com/services/smooth-threads/'
+
+      url: 'https://www.d-essencewellness.com/services/smooth-threads/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Smooth PDO Threads', item: 'https://dessencewellness.com/services/smooth-threads/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Smooth PDO Threads',
+          item: 'https://www.d-essencewellness.com/services/smooth-threads/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (replace later as needed) -->

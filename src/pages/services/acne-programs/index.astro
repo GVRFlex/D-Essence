@@ -7,6 +7,7 @@ const seo = {
     'A customized Teen Acne Facial guided by Face Reality® principles to clear congestion, calm inflammation, and build healthy skincare habits. Includes deep cleansing, gentle exfoliation, extractions, calming mask, and LED or high-frequency as needed.',
   canonical: '/services/teen-acne-facial/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -15,12 +16,15 @@ const seo = {
       serviceType: 'Facial Treatment',
       description:
         'A teen-focused facial using clinical-grade products and Face Reality®-inspired protocols to support clearer, balanced skin with education on healthy routines.',
+
       audience: { '@type': 'PeopleAudience', suggestedAge: '12-19' },
       areaServed: 'Hudson Valley, NY',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
         telephone: '+1-716-303-8963',
+
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -28,21 +32,39 @@ const seo = {
           addressRegion: 'NY',
           postalCode: '12553',
           addressCountry: 'US'
-        }
+        },
+
+        // Opcionales recomendados por Google
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        url: 'https://www.d-essencewellness.com'
       },
-      url: 'https://dessencewellness.com/services/teen-acne-facial/'
+
+      url: 'https://www.d-essencewellness.com/services/teen-acne-facial/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Teen Acne Facial', item: 'https://dessencewellness.com/services/teen-acne-facial/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Teen Acne Facial',
+          item: 'https://www.d-essencewellness.com/services/teen-acne-facial/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (placeholder; replace later) -->

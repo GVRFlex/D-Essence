@@ -7,48 +7,68 @@ const seo = {
     'Subtle, natural-looking softening of frown lines, crow’s feet, and forehead lines using onabotulinumtoxinA.',
   canonical: '/services/neurotoxins/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'MedicalProcedure',
-      name: 'Botulinum toxin type A (Neurotoxins) — Cosmetic',
+      name: 'Cosmetic Neurotoxins (Botulinum Toxin Type A)',
       alternateName: 'Neurotoxins',
       procedureType: 'Non-surgical aesthetic treatment',
-      bodyLocation: 'Glabella, forehead, periocular (crow’s feet)',
-      howPerformed: 'Microinjections into specific facial muscles',
-      preparation: 'Avoid blood-thinning supplements/medications when medically appropriate; arrive with clean skin.',
-      followup: 'Review at 10–14 days if needed.',
-      estimatedCost: 'Varies by area and units',
+      description:
+        'Subtle softening of dynamic wrinkles including glabella, forehead, and crow’s feet using onabotulinumtoxinA.',
+      bodyLocation: 'Glabella, forehead, periocular area (crow’s feet)',
+      howPerformed:
+        'Precise microinjections into targeted facial muscles to reduce expression lines while preserving natural movement.',
+      preparation:
+        'Avoid blood-thinning supplements or medications when medically appropriate. Arrive with clean skin.',
+      followup:
+        'Optional refinement visit at 10–14 days if needed.',
+      estimatedCost: 'Varies by area and number of units used',
       areaServed: 'Hudson Valley, NY',
-      availableService: {
-        '@type': 'Service',
-        serviceType: 'Cosmetic neurotoxin treatment (onabotulinumtoxinA)',
-        provider: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness',
-          telephone: '+1-716-303-8963',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '871 Blooming Grove Turnpike Suite 102',
-            addressLocality: 'New Windsor',
-            addressRegion: 'NY',
-            postalCode: '12553',
-            addressCountry: 'US'
-          }
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        telephone: '+1-716-303-8963',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
         }
-      }
+      },
+
+      url: 'https://www.d-essencewellness.com/services/neurotoxins/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Neurotoxins', item: 'https://dessencewellness.com/services/neurotoxins/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Neurotoxins',
+          item: 'https://www.d-essencewellness.com/services/neurotoxins/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload imagen principal (WEBP para asegurar que existe) -->

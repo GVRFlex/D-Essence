@@ -7,6 +7,7 @@ const seo = {
     'Medical-grade, medium-depth peel that brightens and refines while targeting discoloration, acne scars, fine lines, and sun damage. Powerful blend including TCA, retinoic and salicylic acids, kojic acid, phenol, and glutathione.',
   canonical: '/services/the-perfect-derma-peel/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,12 +15,19 @@ const seo = {
       name: 'The Perfect Derma Peel',
       serviceType: 'Chemical Peel',
       description:
-        'A medium-depth, medical-grade peel to brighten tone, refine texture, and address discoloration, acne scars, fine lines, and sun damage.',
+        'A medium-depth, medical-grade peel designed to brighten skin tone, refine texture, and improve discoloration, acne scars, fine lines, and sun damage.',
       areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
         telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -29,19 +37,32 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/the-perfect-derma-peel/'
+
+      url: 'https://www.d-essencewellness.com/services/the-perfect-derma-peel/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'The Perfect Derma Peel', item: 'https://dessencewellness.com/services/the-perfect-derma-peel/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'The Perfect Derma Peel',
+          item: 'https://www.d-essencewellness.com/services/the-perfect-derma-peel/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared service image (replace later as needed) -->

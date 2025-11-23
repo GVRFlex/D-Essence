@@ -2,11 +2,12 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'SkinPen® Microneedling | D-Essence Wellness',
+  title: 'SkinPen Microneedling | D-Essence Wellness',
   description:
-    'FDA-cleared SkinPen® microneedling stimulates collagen and elastin to improve fine lines, acne scars, and overall texture—safe for all skin types.',
+    'FDA-cleared SkinPen microneedling stimulates collagen and elastin to improve fine lines, acne scars, and overall texture—safe for all skin types.',
   canonical: '/services/skinpen-microneedling/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,18 +15,27 @@ const seo = {
       name: 'SkinPen Microneedling',
       alternateName: 'Collagen Induction Therapy',
       procedureType: 'Non-surgical aesthetic treatment',
-      howPerformed: 'Controlled microneedling with an FDA-cleared device to stimulate collagen and elastin',
+      howPerformed:
+        'Controlled microneedling with an FDA-cleared device to stimulate collagen and elastin.',
       bodyLocation: 'Face, neck, and other indicated areas',
-      preparation: 'Arrive with clean skin; avoid strong actives/retinoids per guidance.',
-      followup: 'Series recommended; post-care and SPF advised.',
+      preparation:
+        'Arrive with clean skin; avoid strong actives such as AHAs/BHAs and retinoids 3–5 days prior.',
+      followup:
+        'Series recommended (typically 3–6 sessions). Post-care includes hydration and strict SPF.',
       areaServed: 'Hudson Valley, NY',
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       availableService: {
         '@type': 'Service',
         serviceType: 'Microneedling (SkinPen)',
         provider: {
           '@type': 'HealthAndBeautyBusiness',
           name: 'D-Essence Wellness',
+          url: 'https://www.d-essencewellness.com',
           telephone: '+1-716-303-8963',
+          image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+          priceRange: '$$',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -36,19 +46,32 @@ const seo = {
           }
         }
       },
-      url: 'https://dessencewellness.com/services/skinpen-microneedling/'
+
+      url: 'https://www.d-essencewellness.com/services/skinpen-microneedling/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'SkinPen Microneedling', item: 'https://dessencewellness.com/services/skinpen-microneedling/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'SkinPen Microneedling',
+          item: 'https://www.d-essencewellness.com/services/skinpen-microneedling/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared placeholder image -->

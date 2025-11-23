@@ -4,31 +4,82 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Laser Treatments | D-Essence Wellness',
   description:
-    'Aerolase Neo Elite for acne, rosacea, hyperpigmentation, melasma, redness, vessels and rejuvenation; plus Laser Hair Removal safe for all skin tones (Fitzpatrick I–VI).',
+    'Aerolase Neo Elite for acne, rosacea, hyperpigmentation, melasma, redness, vessels, and skin rejuvenation — plus Laser Hair Removal safe for all skin tones (Fitzpatrick I–VI).',
   canonical: '/services/laser/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'HealthAndBeautyBusiness',
-      name: 'D-Essence Wellness',
-      url: 'https://dessencewellness.com/services/laser/',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '871 Blooming Grove Turnpike Suite 102',
-        addressLocality: 'New Windsor',
-        addressRegion: 'NY',
-        postalCode: '12553',
-        addressCountry: 'US'
+      '@type': 'Service',
+      name: 'Laser Treatments',
+      serviceType: 'Aesthetic Laser Treatment',
+      description:
+        'Aerolase Neo Elite for acne, rosacea, hyperpigmentation, melasma, redness, vessels, and rejuvenation; plus Laser Hair Removal safe for Fitzpatrick I–VI.',
+      url: 'https://www.d-essencewellness.com/services/laser/',
+      areaServed: 'Hudson Valley, NY',
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        telephone: '+1-716-303-8963',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
       },
-      makesOffer: [
-        { '@type': 'Service', name: 'Aerolase Neo Elite' },
-        { '@type': 'Service', name: 'Laser Hair Removal' }
+
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Laser Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Aerolase Neo Elite (Skin Rejuvenation & Acne Treatment)'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Laser Hair Removal (Safe for Fitzpatrick I–VI)'
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Laser Treatments',
+          item: 'https://www.d-essencewellness.com/services/laser/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (oscuro) ===== -->

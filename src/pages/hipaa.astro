@@ -7,19 +7,25 @@ const seo = {
   title: 'HIPAA Privacy Policy | D-Essence Wellness',
   description:
     'Notice of Privacy Practices (HIPAA). Learn how your protected health information may be used and disclosed, and how you can access it.',
-  canonical: 'https://d-essencewellness.com/hipaa',
+  canonical: '/hipaa',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'PrivacyPolicy',
       name: 'HIPAA Privacy Policy (Notice of Privacy Practices)',
-      url: 'https://d-essencewellness.com/hipaa',
-      dateModified: '2024-06-09'
+      url: 'https://www.d-essencewellness.com/hipaa',
+      dateModified: '2024-06-09',
+
+      // Opcionales recomendados por Google
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$'
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (dark) ===== -->

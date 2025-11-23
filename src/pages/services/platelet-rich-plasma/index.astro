@@ -7,6 +7,7 @@ const seo = {
     'PRP therapy uses your own growth factors to stimulate collagen, rejuvenate skin, and support hair growth—promoting natural renewal with minimal downtime.',
   canonical: '/services/prp-therapy/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,43 +15,60 @@ const seo = {
       name: 'Platelet-Rich Plasma (PRP) Therapy',
       alternateName: 'PRP Treatment',
       procedureType: 'Regenerative/Aesthetic treatment',
-      bodyLocation: 'Face, scalp, neck, décolletage (varies by plan)',
+      description:
+        'PRP uses concentrated growth factors from your own blood to rejuvenate skin, stimulate collagen, or support hair restoration.',
+      bodyLocation: 'Face, scalp, neck, décolletage (depending on treatment plan)',
       howPerformed:
-        'A small blood draw is spun in a centrifuge to isolate platelet-rich plasma. PRP is then applied/injected to targeted areas to deliver growth factors.',
+        'A small blood draw is centrifuged to isolate platelet-rich plasma (PRP). The PRP is then injected or applied to targeted areas.',
       preparation:
-        'Arrive well-hydrated; avoid blood-thinning supplements/medications when medically appropriate; come with clean skin/scalp.',
-      followup: 'Series recommended depending on goals; reassess at follow-ups for maintenance cadence.',
+        'Arrive well hydrated; avoid blood-thinning supplements/medications when medically appropriate; come with clean skin or scalp.',
+      followup:
+        'A series of treatments is typically recommended. Maintenance varies by individual needs and goals.',
       estimatedCost: 'Varies by area and number of sessions',
       areaServed: 'Hudson Valley, NY',
-      availableService: {
-        '@type': 'Service',
-        serviceType: 'Platelet-Rich Plasma (PRP) Therapy',
-        provider: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness',
-          telephone: '+1-716-303-8963',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '871 Blooming Grove Turnpike Suite 102',
-            addressLocality: 'New Windsor',
-            addressRegion: 'NY',
-            postalCode: '12553',
-            addressCountry: 'US'
-          }
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        telephone: '+1-716-303-8963',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
         }
-      }
+      },
+
+      url: 'https://www.d-essencewellness.com/services/prp-therapy/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'PRP Therapy', item: 'https://dessencewellness.com/services/prp-therapy/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'PRP Therapy',
+          item: 'https://www.d-essencewellness.com/services/prp-therapy/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload image -->

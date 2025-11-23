@@ -7,6 +7,7 @@ const seo = {
     'Customized vitamin injections to boost energy, strengthen immunity, and support overall wellness. Options include Glutathione, MIC + B12, Lipo-Stat Plus, Tri-Immune Boost, Riposte Plus, B12 Boost, and Vita Complex.',
   canonical: '/services/vitamin-injections/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,12 +15,19 @@ const seo = {
       name: 'Vitamin Injections',
       serviceType: 'Wellness Injection Therapy',
       description:
-        'Targeted intramuscular vitamin injections for energy, immunity, recovery, and skin clarity.',
+        'Targeted intramuscular vitamin injections for enhanced energy, immunity, recovery, and skin clarity.',
       areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
       provider: {
         '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
         telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -29,19 +37,32 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/vitamin-injections/'
+
+      url: 'https://www.d-essencewellness.com/services/vitamin-injections/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Vitamin Injections', item: 'https://dessencewellness.com/services/vitamin-injections/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Vitamin Injections',
+          item: 'https://www.d-essencewellness.com/services/vitamin-injections/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload shared image (placeholder; replace later) -->

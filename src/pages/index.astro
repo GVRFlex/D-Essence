@@ -8,30 +8,33 @@ const seo = {
   canonical: '/',
   type: 'website',
   jsonLd: [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'HealthAndBeautyBusiness',
-      name: 'D-Essence Wellness',
-      telephone: '+1-716-303-8963',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '871 Blooming Grove Turnpike Suite 102',
-        addressLocality: 'New Windsor',
-        addressRegion: 'NY',
-        postalCode: '12553',
-        addressCountry: 'US'
-      },
-      openingHoursSpecification: [
-        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday'], opens: '10:00', closes: '19:00' },
-        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Friday','Saturday'], opens: '09:00', closes: '18:00' }
-      ],
-      potentialAction: {
-        '@type': 'ReserveAction',
-        target: { '@type': 'EntryPoint', urlTemplate: 'https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx', inLanguage: 'en' },
-        result: { '@type': 'Reservation', name: 'Consultation Request' }
-      }
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HealthAndBeautyBusiness',
+    name: 'D-Essence Wellness',
+    image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+    priceRange: '$$',
+    telephone: '+1-716-303-8963',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '871 Blooming Grove Turnpike Suite 102',
+      addressLocality: 'New Windsor',
+      addressRegion: 'NY',
+      postalCode: '12553',
+      addressCountry: 'US'
+    },
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday'], opens: '10:00', closes: '19:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Friday','Saturday'], opens: '09:00', closes: '18:00' }
+    ],
+    potentialAction: {
+      '@type': 'ReserveAction',
+      target: { '@type': 'EntryPoint', urlTemplate: 'https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx', inLanguage: 'en' },
+      result: { '@type': 'Reservation', name: 'Consultation Request' }
     }
-  ]
+  }
+]
+
 };
 ---
 

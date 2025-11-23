@@ -7,28 +7,37 @@ const seo = {
     'Learn about Yanixza Morales, MSN, FNP-BC — Board-Certified Family Nurse Practitioner & Founder of D-Essence Wellness. Mission, goals, and care philosophy focused on balance and confidence.',
   canonical: '/about-us',
   type: 'profile',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
       name: 'About Us',
-      url: 'https://dessencewellness.com/about-us',
+      url: 'https://www.d-essencewellness.com/about-us',
+
       mainEntity: {
         '@type': 'Person',
         name: 'Yanixza Morales, MSN, FNP-BC',
         jobTitle: 'Board-Certified Family Nurse Practitioner & Founder',
         description:
           'Board-Certified FNP leading evidence-based aesthetic & wellness care with a personalized, caring touch.',
-        image: 'https://dessencewellness.com/Cover.webp',
+        image: 'https://www.d-essencewellness.com/Cover.webp',
+
         worksFor: {
           '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness'
+          name: 'D-Essence Wellness',
+          url: 'https://www.d-essencewellness.com'
         }
-      }
+      },
+
+      // Opcionales recomendados por Google
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$'
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <section class="bg-white text-neutral-900">

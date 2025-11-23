@@ -7,6 +7,7 @@ const seo = {
     'Soft, natural-looking lip enhancement with hyaluronic acid fillers—restore definition, smooth lines, and add gentle volume for a hydrated, youthful look.',
   canonical: '/services/lip-filler/',
   type: 'website',
+
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -14,43 +15,60 @@ const seo = {
       name: 'Lip Filler',
       alternateName: 'Hyaluronic Acid Lip Augmentation',
       procedureType: 'Non-surgical aesthetic treatment',
+      description:
+        'Soft, natural lip enhancement with hyaluronic acid fillers for definition, hydration, and balanced volume.',
       bodyLocation: 'Lips and perioral area',
       howPerformed:
-        'Hyaluronic acid filler is precisely injected to enhance definition, smooth lines, and add soft volume.',
+        'Hyaluronic acid filler is precisely injected to enhance definition, smooth vertical lines, and add soft, hydrated volume.',
       preparation:
-        'Arrive with clean skin; avoid blood-thinning supplements/medications when medically appropriate.',
-      followup: 'Results are immediate; refinement occurs as swelling settles. Touch-ups as needed.',
+        'Arrive with clean skin. Avoid blood-thinning supplements or medications when medically appropriate.',
+      followup:
+        'Swelling resolves over a few days; refinement continues as tissue integrates. A touch-up may be recommended after 2–4 weeks.',
       estimatedCost: 'Varies by product and amount used',
       areaServed: 'Hudson Valley, NY',
-      availableService: {
-        '@type': 'Service',
-        serviceType: 'Lip Filler (Hyaluronic Acid)',
-        provider: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness',
-          telephone: '+1-716-303-8963',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '871 Blooming Grove Turnpike Suite 102',
-            addressLocality: 'New Windsor',
-            addressRegion: 'NY',
-            postalCode: '12553',
-            addressCountry: 'US'
-          }
+      
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        telephone: '+1-716-303-8963',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
         }
-      }
+      },
+
+      url: 'https://www.d-essencewellness.com/services/lip-filler/'
     },
+
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Lip Filler', item: 'https://dessencewellness.com/services/lip-filler/' }
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Lip Filler',
+          item: 'https://www.d-essencewellness.com/services/lip-filler/'
+        }
       ]
     }
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- Preload image (shared placeholder) -->
