@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel/static';
 
 export default defineConfig({
   site: 'https://www.d-essencewellness.com',
@@ -8,5 +9,6 @@ export default defineConfig({
   alias: { '@': '/src' },
   integrations: [
     sitemap()
-  ]
+  ],
+  adapter: vercel()
 });
