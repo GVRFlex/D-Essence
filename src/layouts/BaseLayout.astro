@@ -6,13 +6,22 @@ export interface Props {
     canonical?: string;
     type?: string;
     jsonLd?: any[];
+    noindex?: boolean;
   };
 }
+
 import "../styles/globals.css";
+
 const { seo } = Astro.props;
 const title = seo?.title ?? 'D-Essence Wellness';
 const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
-const canonical = seo?.canonical ?? '/';
+
+// Canonical absoluto para SEO (Google lo requiere)
+const canonicalPath = seo?.canonical ?? "/";
+const canonical = canonicalPath.startsWith("http")
+  ? canonicalPath
+  : `https://www.d-essencewellness.com${canonicalPath}`;
+
 const type = seo?.type ?? 'website';
 const jsonLd = seo?.jsonLd ?? [];
 ---
@@ -21,29 +30,45 @@ const jsonLd = seo?.jsonLd ?? [];
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Canonical absoluto -->
     <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+
+    <!-- Noindex para páginas específicas -->
+    {seo?.noindex && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
 
-    <!-- Pro typography -->
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root { --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
       html, body { font-family: var(--font-sans); }
     </style>
 
+    <!-- JSON-LD -->
     {jsonLd.length > 0 && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
   </head>
+
 
   <body class="min-h-full bg-[radial-gradient(1200px_700px_at_50%_-100px,#0b0b0b,transparent)]">
     <!-- Mobile nav controller -->
