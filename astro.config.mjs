@@ -4,7 +4,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://www.d-essencewellness.com',
-  output: 'static',
+  output: 'server',
   trailingSlash: 'always',
   alias: { '@': '/src' },
 
