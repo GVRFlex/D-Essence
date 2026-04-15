@@ -8,7 +8,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^9.2.1",
+    "@astrojs/vercel": "^9.0.5",
     "astro": "^5.7.10",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
