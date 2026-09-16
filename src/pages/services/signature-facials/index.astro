@@ -1,4 +1,19 @@
 ---
+// ===== PÁGINA APAGADA TEMPORALMENTE =====
+// Cualquiera que entre directo a esta URL es redirigido al inicio.
+// Para reactivar: borra el bloque "return Astro.redirect('/');" de abajo
+// y descomenta todo el bloque original (frontmatter + template) al final del archivo.
+
+return Astro.redirect('/');
+---
+
+<!--
+===== CÓDIGO ORIGINAL (comentado, no borrado) =====
+Para reactivar esta página:
+1. Elimina el bloque de arriba (el "return Astro.redirect('/');" y este comentario).
+2. Descomenta todo lo siguiente y muévelo al frontmatter/body correspondiente.
+
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
@@ -117,7 +132,7 @@ const seo = {
         <!-- Copy + CTA (sin cuadros) -->
         <div>
           <p class="text-neutral-700/90">
-            At D-Essence Wellness, every facial is customized to your skin’s needs using advanced formulations from
+            At D-Essence Wellness, every facial is customized to your skin's needs using advanced formulations from
             <span class="font-medium">Circadia®</span>, <span class="font-medium">Face Reality®</span>, and
             <span class="font-medium">SkinMedica®</span> to deliver balanced, hydrated, and radiant results.
           </p>
@@ -239,3 +254,4 @@ const seo = {
     })();
   </script>
 </BaseLayout>
+-->
